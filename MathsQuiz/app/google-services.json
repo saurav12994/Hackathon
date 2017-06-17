@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1019755986117-g2m83nab63kk3vphkr6e44uh7vhs3i5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sourabh.mathsquiz",
+            "certificate_hash": "5c24ca61fe79885d29fc3a5d0ccdbfcc250ffde4"
+          }
+        },
+        {
           "client_id": "1019755986117-nbg3g3lbekhfpa4ho50o6o5307q1ai3n.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019755986117-nbg3g3lbekhfpa4ho50o6o5307q1ai3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

@@ -1,10 +1,15 @@
 package com.example.sourabh.mathsquiz;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,6 +17,7 @@ import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mScoreView;
@@ -22,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonChoice4;
     private Firebase mQuestionRef,mChoice1Ref,mChoice2Ref,mChoice3Ref,mChoice4Ref,mAnswerRef;
     ProgressDialog pd;
+Toolbar toolbar;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    Button b1;
+    String[] country = { "Food", "Logo", "Travel", "NSFW"  };
 
     private String mAnswer;
     private int mQuestionNumber=0;
@@ -36,6 +47,33 @@ public class MainActivity extends AppCompatActivity {
         mButtonChoice2 = (Button)findViewById(R.id.choice2);
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonChoice4 = (Button)findViewById(R.id.choice4);
+       /* toolbar=(Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        Spinner spin = (Spinner) findViewById(R.id.spinner1);
+        //spin.setOnItemSelectedListener();
+        mAuth=FirebaseAuth.getInstance();
+        mAuthListener=new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser()==null)
+                {
+                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                }
+            }
+        };
+        b1=(Button)findViewById(R.id.button);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+            }
+        });
+
+        //Creating the ArrayAdapter instance having the country list
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,country);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        spin.setAdapter(aa);*/
         pd = new ProgressDialog(MainActivity.this);
         pd.setMessage("loading");
         pd.show();
@@ -107,6 +145,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+   // @Override
+   // public void onStart() {
+     //   super.onStart();
+       // // Check if user is signed in (non-null) and update UI accordingly.
+        //mAuth.addAuthStateListener(mAuthListener);
+    //}
 
 
     private void updateScore(int score) {
