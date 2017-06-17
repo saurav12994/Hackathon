@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1019755986117",
+    "firebase_url": "https://maths-quiz-27c61.firebaseio.com",
+    "project_id": "maths-quiz-27c61",
+    "storage_bucket": "maths-quiz-27c61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019755986117:android:c6d5e1b89078786a",
+        "android_client_info": {
+          "package_name": "com.example.sourabh.mathsquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019755986117-nbg3g3lbekhfpa4ho50o6o5307q1ai3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1V0j40bVoQtgMn4I5eTBn2exl_zFbsuE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
